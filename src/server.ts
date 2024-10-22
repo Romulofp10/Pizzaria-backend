@@ -29,4 +29,4 @@ app.use((error: Error, req: Request, res: Response, next: NextFunction)  => {
     });
 })
 
-app.listen(3333, () => console.log('teste do servidor'))
+app.listen(process.env.PORT, () => console.log('teste do servidor'))
