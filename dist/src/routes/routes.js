@@ -37,7 +37,8 @@ router.get('/profile', isAuthenticated_1.IsAuthenticated, new DetailUserControll
 router.post('/category/create', isAuthenticated_1.IsAuthenticated, new CreateCategoryController_1.CreateCategoryController().handle);
 router.get('/category/list', isAuthenticated_1.IsAuthenticated, new ListCategoryController_1.ListCategoryController().handle);
 //Router Product
-router.post('/product/create', isAuthenticated_1.IsAuthenticated, upload.single('file'), new CreateProductController_1.CreateProductController().handle);
+//router.post('/product/create', IsAuthenticated, upload.single('file'), new CreateProductController().handle)
+router.post('/product/create', isAuthenticated_1.IsAuthenticated, new CreateProductController_1.CreateProductController().handle);
 router.get('/category/product', isAuthenticated_1.IsAuthenticated, new ListByCategoryController_1.ListByCategoryController().handle);
 //Router Order
 router.post('/order/create', isAuthenticated_1.IsAuthenticated, new CreateOrderController_1.CreateOrderController().handle);
